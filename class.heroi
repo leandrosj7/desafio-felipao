@@ -1,0 +1,39 @@
+class Heroi {
+    constructor(nome, idade, tipo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.tipo = tipo;
+    }
+
+    atacar() {
+        let ataque = "";
+
+        switch (this.tipo) {
+            case "mago":
+                ataque = "sua magia";
+                break;
+
+            case "guerreiro":
+                ataque = "sua espada";
+                break;
+
+            case "monge":
+                ataque = "artes marciais";
+                break;
+
+            case "ninja":
+                ataque = "o chute shuriken";
+                break;
+
+            
+        }
+
+        console.log(`O ${this.tipo} atacou usando ${ataque}`);
+    }
+}
+
+const ninja = new Heroi("Jackie Chan", 27, "ninja");
+const guerreiro = new Heroi("Rambo", 37, "guerreiro");
+
+ninja.atacar();
+guerreiro.atacar(); 
